@@ -53,14 +53,20 @@
 ![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174700.png)
 ### 原型
 #### 原型1.交互及界面设计
+![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174731.png)
+![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174913.png)
+#### 原型2.信息设计
+![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174929.png)
+![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225180106.png)
+
+#### 原型3.原型文档
 - [产品原型下载](https://github.com/13516618583/final)
 
 - [产品原型展示](http://qiuanfeng.gitee.io/final/#g=1&p=公告) 
 
+#### 原型4.口头操作说明
+司机在智体出行司机端APP，按照提示完成人脸信息注册，企业管理员在智行出租车企业管理平台绑定司机与车辆关系，司机上路运营前，车载终端自动调用车载摄像头进行离线人脸识别，确认司机身份进行无感打卡。
+## API使用水平
+## API使用比较分析
+## API使用后风险报告
 
-
-
-![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174731.png)
-![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174913.png)
-![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174929.png)
-![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225180106.png)
