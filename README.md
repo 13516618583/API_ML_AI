@@ -138,48 +138,79 @@ client.driverBehavior(image, options)
 - 百度AI-人脸识别
 输入：
  ```
-{
-	"log_id": "5203795973415387561",
-	"person_info": [
-		{
-			"attributes": {
-				"cellphone": {
-					"threshold": 0.63800001144409,
-					"score": 0.0074096471071243
-				},
-				"both_hands_leaving_wheel": {
-					"threshold": 0.49099999666214,
-					"score": 0.0034253129269928
-				},
-				"not_facing_front": {
-					"threshold": 0.45800000429153,
-					"score": 0.063760884106159
-				},
-				"not_buckling_up": {
-					"threshold": 0.44900000095367,
-					"score": 0.95371598005295
-				},
-				"smoke": {
-					"threshold": 0.4370000064373,
-					"score": 0.00011054333299398
-				}
-			},
-			"location": {
-				"width": 1048,
-				"top": 287,
-				"height": 753,
-				"left": 308
-			}
-		}
-	]
-}
+# encoding:utf-8
+ import requests
+
+ '''
+ 人脸检测与属性分析
+ '''
+
+import urllib.request,sys,base64
+import urllib.parse
+request_url = "https://aip.baidubce.com/rest/2.0/face/v3/detect"
+
+f = open('q3.jpg', 'rb')
+image = base64.b64encode(f.read())
+image64 = str(image,'utf-8')
+image_type = "BASE64"
+
+
+
+
+params = {'image': image64,'image_type':"BASE64",'face_field': 'faceshape,facetype'}
+
+params = urllib.parse.urlencode(params).encode("utf-8")
+
+
+access_token = '[24.b5ff1af7ad57860f4a47b0972dd0560f.2592000.1579764577.282335-18098227]'
+request_url = request_url + "?access_token=" + access_token
+
+request = urllib.request.urlopen(url=request_url, data=params)   
+
+content = request.read()  
+print(content) 
+
+ ```
+ 
+ 输出：
+ ```
+ (b'{"error_code":0,"error_msg":"SUCCESS","log_id":19955551594,"timestamp":15771'
+ b'72758,"cached":0,"result":{"face_num":1,"face_list":[{"face_token":"3d44d56f'
+ b'3d2d41190368b2697023d5f2","location":{"left":235.97,"top":819.91,"width":426'
+ b',"height":446,"rotation":0},"face_probability":0.95,"angle":{"yaw":-7.9,"pit'
+ b'ch":-5.58,"roll":-4.76},"face_shape":{"type":"square","probability":0.52},"f'
+ b'ace_type":{"type":"human","probability":1}}]}}')
+
  ```
 ## API使用比较分析
+### 自身分析
+##### 百度AI-人脸识别
+- 算法世界领先 ：
+基于百度专业的深度学习算法和海量数据训练，人脸识别算法在最权威的公开评测比赛中排名世界领先 
+- 服务稳定高效 
+提供企业级稳定、精确的大流量服务。支持毫秒级的识别响应能力、弹性灵活的高并发 
+- 灵活简单易用 ：
+可自定义接口的返回参数信息，灵活组合各项人脸技术模块，实现不同业务功能 
+##### 百度AI-驾驶行为识别
+- 深入场景 ：
+专项训练高精度识别模型，覆盖出租车、客车、公交车、货车等典型车载场景 
+- 应用灵活 
+针对每类属性行为，分别返回概率分数和建议阈值，可根据实际业务需求灵活设置 
+- 服务稳定 
+可提供企业级稳定、精确的大流量服务，拥有毫秒级识别响应能力及99.9%的可靠性保障 
 
-### 自身分析：百度AI——驾驶
+### 竞争对手分析
+##### 阿里云智能人脸识别
+- 识别精度高、解码速率快、反馈时间短， 免费只有试用套餐，收费使用价格较高。
+
+##### 总结
+- 百度方和阿里方各有各的产品优势、技术优势，但是百度的API调用性价比较高，所以比较推荐使用百度的API
 
 ## API使用后风险报告
-
+- 驾驶行为分析次数包上新开售，高性价比“行车安全保障”，优惠后接口调用低至0.7元/千次。
+- 目前API市场上，提供“驾驶行为识别”这一API接口服务的公司还是比较少的，只有百度AI这一家，竞争压力小。
+- 目前API市场上，提供“人脸识别”这一API接口服务的公司还是比较多的，百度、阿里、腾讯、微软等等，竞争压力大。
+- 百度人脸识别不支持不支持GIF图片。
 
 
 
