@@ -59,6 +59,8 @@
 
 #### 产品结构图
 ![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174700.png)
+![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200110024753.png)
+![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200110024759.png)
 
 #### 原型1.交互及界面设计
 ![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174731.png)
@@ -66,6 +68,8 @@
 #### 原型2.信息设计
 ![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225174929.png)
 ![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191225180106.png)
+![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200110024809.png)
+![Image](https://github.com/13516618583/picture/blob/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200110024804.png)
 
 #### 原型3.原型文档
 - [产品原型下载](https://github.com/13516618583/final)
