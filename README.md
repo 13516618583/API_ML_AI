@@ -76,7 +76,108 @@
 司机在智能出行司机端APP，按照提示完成人脸信息注册，企业管理员在智行出租车企业管理平台绑定司机与车辆关系，司机上路运营前，车载终端自动调用车载摄像头进行离线人脸识别，确认司机身份进行无感打卡。
 # PART C API
 ## API使用水平
+- API:百度AI--行为分析--驾驶行为分析
+- 输入：
+ ```
+""" 读取图片 """
+def get_file_content(filePath):
+    with open(filePath, 'rb') as fp:
+        return fp.read()
+
+image = get_file_content('example.jpg')
+
+""" 调用驾驶行为分析 """
+client.driverBehavior(image);
+
+""" 如果有可选参数 """
+options = {}
+options["type"] = "smoke"
+
+""" 带参数调用驾驶行为分析 """
+client.driverBehavior(image, options)
+
+
+ ```
+ - 输出：
+  ```
+  {
+  "person_num": 1,
+  "person_info": [{
+    "attributes": {
+      "cellphone": {
+        "threshold": 0.9,
+        "score": 0.500098466873178
+      },
+      "both_hands_leaving_wheel": {
+        "threshold": 0.9,
+        "score": 0.468360424041749
+      },
+      "not_facing_front": {
+        "threshold": 0.9,
+        "score": 0.08260071277818408
+      },
+      "not_buckling_up": {
+        "threshold": 0.9,
+        "score": 0.998087468763092
+      },
+      "smoke": {
+        "threshold": 0.9,
+        "score": 6.29425049828125e-05
+      }
+    },
+    "location": {
+      "width": 483,
+      "top": 5,
+      "height": 238,
+      "left": 8
+    }
+  }],
+  "log_id": 2320165720061799578
+}
+ ```
+- 百度AI-人脸识别
+输入：
+ ```
+{
+	"log_id": "5203795973415387561",
+	"person_info": [
+		{
+			"attributes": {
+				"cellphone": {
+					"threshold": 0.63800001144409,
+					"score": 0.0074096471071243
+				},
+				"both_hands_leaving_wheel": {
+					"threshold": 0.49099999666214,
+					"score": 0.0034253129269928
+				},
+				"not_facing_front": {
+					"threshold": 0.45800000429153,
+					"score": 0.063760884106159
+				},
+				"not_buckling_up": {
+					"threshold": 0.44900000095367,
+					"score": 0.95371598005295
+				},
+				"smoke": {
+					"threshold": 0.4370000064373,
+					"score": 0.00011054333299398
+				}
+			},
+			"location": {
+				"width": 1048,
+				"top": 287,
+				"height": 753,
+				"left": 308
+			}
+		}
+	]
+}
+ ```
 ## API使用比较分析
+
+### 自身分析：百度AI——驾驶
+
 ## API使用后风险报告
 
 
